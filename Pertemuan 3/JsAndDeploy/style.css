@@ -32,7 +32,6 @@ nav{
     display: flex;
     justify-content: space-around;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    width: 100%;
 }
 
 .nav-right{
@@ -44,53 +43,42 @@ nav{
     display: none;
 }
 
-@media screen and (max-width: 600px) {
-    .nav-right li {display: none;}
-    .nav-right a.icon {
-      display: block;
-      font-size: 20px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .nav-right.responsive {
-        position: relative;
-    }
-    .nav-right.responsive a.icon {
-        text-align: end;
-    }
-    .nav-right.responsive li {
-      display: block;
-      float: none;
-      text-align: left;
-    }
-    .nav-right.responsive a {
-      float: none;
-      display: list-item;
-      text-align: left;
-    }
-}
-
 #hero-container{
     display: flex;
     justify-content: space-evenly;
 }
 
 @media screen and (max-width: 600px) {
+    .nav-right .icon {
+        display: block;
+    }
+
+    .nav-right li {
+        display: none;
+    }
+
+    .nav-right.tambahan {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .nav-right.tambahan li {
+        display: block;
+    }
+
     #hero-container {
         display: block;
     }
-    .projects-container {
-        text-align: center;
-        margin-top: 3rem;
-    }
     .language-container {
         text-align: center;
-        margin-bottom: 5rem;
+    }
+    .projects-container {
+        text-align: center;
     }
     .about-me {
         text-align: center;
-        margin-bottom: 2rem;
     }
     .about-me p {
         margin: auto;
@@ -145,16 +133,6 @@ footer {
     align-items: center;
 }
 
-@media screen and (max-width: 600px) {
-    footer {
-        display: block;
-        text-align: center;
-    }
-    .footer-right {
-        justify-content: center;
-    }
-}
-
 .footer-right {
     display: flex;
     align-items: center;
@@ -163,4 +141,11 @@ footer {
 
 .footer-right img {
     width: 30px;
+}
+
+@media screen and (max-width: 600px) {
+    footer {
+        display: block;
+        text-align: center;
+    }
 }
